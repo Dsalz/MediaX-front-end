@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home | Asset Owners</title>
+    <meta Button="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <script src="js/jquery.min.js"></script>
+    <link href='css/fullcalendar.min.css' rel='stylesheet' />
+    <link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+    <script src='js/moment.min.js'></script>
+    <script src='js/fullcalendar.min.js'></script>
+
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script>
+        $(document).ready(function () {
+
+            $('#calendar').fullCalendar({
+                defaultDate: '2018-03-12',
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                events: [{
+
+                        start: '2018-03-01'
+                    },
+                    {
+
+                        start: '2018-03-07',
+                        end: '2018-03-10'
+                    },
+                    {
+
+                        start: '2018-03-09T16:00:00'
+                    },
+                    {
+
+                        start: '2018-03-11',
+                        end: '2018-03-13'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2018-03-12T10:30:00',
+                        end: '2018-03-12T12:30:00'
+                    },
+                    {
+                        title: 'Lunch',
+                        start: '2018-03-12T12:00:00'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2018-03-12T14:30:00'
+                    },
+                    {
+                        title: 'Happy Hour',
+                        start: '2018-03-12T17:30:00'
+                    },
+                    {
+                        title: 'Dinner',
+                        start: '2018-03-12T20:00:00'
+                    },
+                    {
+                        start: '2018-03-13T07:00:00'
+                    }
+                ]
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="svg-div" id="svg-div">
+        <!-- All SVGs to be used within the project is loaded into this div with AJAX. See load-svg.js -->
+    </div>
+
+    <div class="work">
+
+        <!-- SIDEBAR -->
+        <div data-include="ao-sidebar.html"></div>
+
+        <div class="work__content">
+            <!-- NAVBAR -->
+            <div data-include="ao-navbar.html"></div>
+
+            <div class="work__body">
+                <div class="work__body-container">
+                    <div class="work__body-header-container">
+                        <h2 class="work__body-header">Dashboard</h2>
+                    </div>
+                    <hr class="work__body-line">
+
+
+                    <section>
+                        <div class="dashboard__card-container">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="dashboard__card">
+                                        <svg class="icon icon--dashboard dashboard__card-icon ml-auto my-auto">
+                                            <use xlink:href="#icon-billboard"></use>
+                                        </svg>
+                                        <div class="mr-auto my-auto">
+                                            <p class="dashboard__card-name">Active Billboards</p>
+                                            <h4 class="dashboard__card-fig">45</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="dashboard__card">
+                                        <svg class="icon icon--dashboard dashboard__card-icon ml-auto my-auto">
+                                            <use xlink:href="#icon-credit-card"></use>
+                                        </svg>
+                                        <div class="mr-auto my-auto">
+                                            <p class="dashboard__card-name">Next Payout</p>
+                                            <h4 class="dashboard__card-fig">NGN 484,300.00</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="dashboard__card">
+                                        <svg class="icon icon--dashboard dashboard__card-icon ml-auto my-auto">
+                                            <use xlink:href="#icon-calendar-check"></use>
+                                        </svg>
+                                        <div class="mr-auto my-auto">
+                                            <p class="dashboard__card-name">Booked Slots</p>
+                                            <h4 class="dashboard__card-fig">35</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="dashboard__calendar-header-wrapper">
+                                    <h2 class="dashboard__calendar-header text-center">Slots Booking Period</h2>
+                                </div>
+                                <div>
+                                    <div id='calendar'></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+
+
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/load-svg.js"></script>
+    <script src="js/csi.min.js"></script>
+
+</body>
+
+</html>

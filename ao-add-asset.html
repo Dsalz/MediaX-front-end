@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Add Asset | Asset Owners</title>
+    <meta Button="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <script src="js/jquery.min.js"></script>
+    <script src= "js/bootstrap.min.js"></script>
+    <link href='css/fullcalendar.min.css' rel='stylesheet' />
+    <link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+    <script src='js/moment.min.js'></script>
+    <script src='js/fullcalendar.min.js'></script>
+
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+
+</head>
+
+<body>
+
+        <div class="svg-div" id="svg-div">
+            <!-- All SVGs to be used within the project is loaded into this div with AJAX. See load-svg.js -->
+        </div>
+    
+        <div class="work">
+    
+            <!-- SIDEBAR -->
+            <div data-include="ao-sidebar.html"></div>
+    
+            <div class="work__content">
+                <!-- NAVBAR -->
+                <div data-include="ao-navbar.html"></div>
+    
+                <div class="work__body">
+   
+                        <nav aria-label="breadcrumb">
+
+                                    <ol class="breadcrumb ao-add-asset-breadcrumb">
+
+                                      <li class="breadcrumb-item ao-add-asset-breadcrumb-item"><a href="#">Billboard</a></li>
+
+                                      <li class="breadcrumb-item ao-add-asset-breadcrumb-item active" aria-current="page">Add Billboard</li>
+                                   
+                                    </ol>
+                        </nav>
+
+                    <section class="ao-add-asset-section">
+
+                            <ul class="nav nav-tabs ao-add-asset-header" id="myTab" role="tablist">
+
+                                    <li class="ao-add-asset-header-item">
+
+                                      <a class="nav-link active" id="billboarddetails-tab" data-toggle="tab" href="#billboarddetails" role="tab" aria-controls="billboarddetails" aria-selected="true">
+                                           
+                                        <span class="ao-add-asset-header-item-number">1</span> Billboard Details
+                                      
+                                      </a>
+
+                                    </li>
+
+                                    <li class="ao-add-asset-header-item">
+
+                                            <a class="nav-link" id="screendetails-tab" data-toggle="tab" href="#screendetails" role="tab" aria-controls="screendetails" aria-selected="false">
+                                                 
+                                                <span class="ao-add-asset-header-item-number">2</span> Screen Details
+                                
+                                            </a>
+      
+                                    </li>
+
+                                    <li class="ao-add-asset-header-item">
+
+                                            <a class="nav-link" id="annualrates-tab" data-toggle="tab" href="#annualrates" role="tab" aria-controls="annualrates" aria-selected="false">
+                                                 
+                                                <span class="ao-add-asset-header-item-number">3</span> Annual Rates
+                                
+                                            </a>
+      
+                                    </li>
+
+                                    <li class="ao-add-asset-header-item">
+
+                                            <a class="nav-link" id="geotagging-tab" data-toggle="tab" href="#geotagging" role="tab" aria-controls="geotagging" aria-selected="true">
+                                                 
+                                                <span class="ao-add-asset-header-item-number">4</span> Geotagging
+                                
+                                            </a>
+      
+                                    </li>
+
+                            </ul>
+
+                                 <!-- Uninteractive header -->
+                        <!-- <section class="ao-add-asset-header">
+
+                            <span class="ao-add-asset-header-item active">
+
+                                <span class="ao-add-asset-header-item-number">1</span> Billboard Details
+                            
+                            </span>
+
+                            <span class="ao-add-asset-header-item">
+
+                                    <span class="ao-add-asset-header-item-number">2</span> Screen Details
+                                
+                            </span>
+                        
+                            <span class="ao-add-asset-header-item">
+
+                                    <span class="ao-add-asset-header-item-number">3</span> Annual Rates
+                                
+                            </span>
+
+                            <span class="ao-add-asset-header-item">
+
+                                    <span class="ao-add-asset-header-item-number">4</span> Geotagging
+                                
+                            </span>
+
+                        </section> -->
+
+                        <div class="tab-content ao-add-asset-body" id="myTabContent">
+                            
+                                <div class="tab-pane fade show active" id="billboarddetails" role="tabpanel" aria-labelledby="billboarddetails-tab">
+                                
+                                            <section class="ao-add-asset-body-info">
+
+                                                <h2>Billboard Details</h2>
+                                                <p>
+                                                        This section allows us understand the type of digital billboard you have and where it is located.
+                                                </p>
+                
+                                            </section>
+                
+                                            <section class="ao-add-asset-body-form">
+                
+                                                <form>
+                                                    
+                                                    <section class="ao-add-asset-body-form-item">
+                                                    
+                                                        <section class="ao-add-asset-body-form-item-type">
+                
+                                                            <label for="type">Billboard Type</label>
+                                                            
+                                                            <select class="ao-add-asset-body-form-input">
+                                                            
+                                                                <option>Indoor Shopping Mall</option>
+                                                            
+                                                            </select>
+                
+                                                        </section>
+                
+                                                        <section class="ao-add-asset-body-form-item-screen">
+                                                        
+                                                            <label>Screens</label>
+                
+                                                            <input type="number" class="ao-add-asset-body-form-input" />
+                
+                                                        </section>
+                
+                                                    </section>
+                
+                                                    <label>Billboard Address</label>
+                
+                                                    <input type="text" class="ao-add-asset-body-form-input"  placeholder="Street Name"/>
+                                                    
+                                                    <section class="ao-add-asset-body-form-item">
+                                                    
+                                                            <section class="ao-add-asset-body-form-item-state">
+                    
+                                                                <label for="state">State</label>
+                                                                
+                                                                <select class="ao-add-asset-body-form-input">
+                                                                
+                                                                    <option>Lagos</option>
+                                                                
+                                                                </select>
+                    
+                                                            </section>
+                    
+                                                            <section class="ao-add-asset-body-form-item-city">
+                                                            
+                                                                <label>City</label>
+                    
+                                                                <input type="text" class="ao-add-asset-body-form-input" />
+                    
+                                                            </section>
+                    
+                                                    </section>
+                
+                                                    <label>Notable Heritage</label>
+                
+                                                    <input type="text" class="ao-add-asset-body-form-input"  placeholder="A popular building bridge or location"/>
+                                                    
+                                                    <input type="submit" class="ao-add-asset-body-form-save-btn" value="SAVE BILLBOARD DETAILS"/>
+                
+                                                </form>
+                                                
+                                            </section>
+
+                                </div>
+                            
+                                <div class="tab-pane fade" id="screendetails" role="tabpanel" aria-labelledby="screendetails-tab">
+                                   
+                                        <section class="ao-add-asset-body-info">
+
+                                                <h2>Screen Details</h2>
+
+                                                <p>
+                                                    For each screen, provide informaion about the dimension, traffic details, and video formats. These details will allow us present your billboards to the correct people.
+                                                </p>
+                
+                                        </section>
+
+                                        <section class="ao-add-asset-screen-details">
+
+                                            <section class="ao-add-asset-screen-details-none">
+
+                                                    <img src="svg/icon-big-screen.png" alt="screen details image" class="ao-add-asset-screen-details-none-img"/>
+
+                                                    <h4> Add your first screen </h4>
+
+                                                    <p>
+                                                         Screens are where ads will be displayed. Tell us about your screen size, dimension, available slots when you add a screen
+                                                    </p>
+
+                                                    <button class="ao-add-asset-screen-details-none-btn">+ ADD SCREEN</button>
+
+                                            </section>
+
+                                            <section class="ao-add-asset-screen-details-added">
+
+                                                <h3>Screens</h3>
+
+                                                <a href="#" class="ao-add-asset-screen-details-add-more">Add Screen <span>+</span></a>
+
+                                                <section class = "ao-add-asset-screen-details-added-item">
+
+                                                    <section class="ao-add-asset-screen-details-added-item-img">
+
+                                                        <!-- <img  src="svg/icon-big-screen.png" alt="screen" /> -->
+                                                        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="72" height="72" fill="black" fill-opacity="0"/>
+                                                            <rect width="72" height="72" rx="2" fill="#DADADA"/>
+                                                            <rect width="48" height="41.6217" fill="black" fill-opacity="0" transform="translate(12 15)"/>
+                                                            <path d="M59.3456 15H12.6544C12.293 15 12 15.293 12 15.6544V45.5059C12 45.8673 12.293 46.1603 12.6544 46.1603H13.9759V55.9671C13.9759 56.3286 14.2689 56.6216 14.6303 56.6216H16.5721C16.9336 56.6216 17.2266 56.3286 17.2266 55.9671V53.8576L20.1047 56.0162C20.1298 56.3547 20.4118 56.6216 20.7567 56.6216H22.6986C23.06 56.6216 23.353 56.3286 23.353 55.9671V46.1603H48.4981V55.9671C48.4981 56.3286 48.7911 56.6216 49.1525 56.6216H51.0943C51.4557 56.6216 51.7487 56.3286 51.7487 55.9671V53.8576L54.6268 56.0163C54.6521 56.3547 54.9339 56.6217 55.2788 56.6217H57.2207C57.5821 56.6217 57.8751 56.3287 57.8751 55.9672V46.1603H59.3456C59.707 46.1603 60 45.8673 60 45.5059V15.6544C60 15.2929 59.707 15 59.3456 15ZM57.2206 44.8515H55.2787H51.0943H49.1525H22.6986H20.7567H16.5721H14.6303H13.3088V16.3088H58.6912V44.8515H57.2206ZM49.8069 46.1603H50.4399V55.3127H49.8069V46.1603ZM52.036 46.1603H54.6244V48.1016L52.036 46.1603ZM51.7487 47.5809L54.1881 49.4104L51.7487 51.2399V47.5809ZM54.6244 50.7192V54.3783L52.185 52.5488L54.6244 50.7192ZM56.5662 55.3127H55.9332V46.1603H56.5662V55.3127ZM15.2848 46.1603H15.9177V55.3127H15.2848V46.1603ZM17.5139 46.1603H20.1023V48.1016L17.5139 46.1603ZM17.2266 47.5809L19.666 49.4104L17.2266 51.24V47.5809ZM20.1023 50.7192V54.3782L17.6629 52.5488L20.1023 50.7192ZM22.0442 55.3127H21.4111V46.1603H22.0442V55.3127ZM56.846 17.6301H15.1539C14.7925 17.6301 14.4995 17.9231 14.4995 18.2845V42.8757C14.4995 43.2372 14.7925 43.5302 15.1539 43.5302H56.846C57.2075 43.5302 57.5005 43.2372 57.5005 42.8757V18.2845C57.5005 17.9231 57.2075 17.6301 56.846 17.6301ZM56.1916 18.9389V42.2213H27.7088L45.3855 25.379C45.6472 25.1297 45.6572 24.7155 45.4079 24.4538C45.1586 24.192 44.7443 24.1821 44.4826 24.4314L25.8114 42.2213H18.7747L43.2105 18.9389H50.2471L48.4531 20.6482C48.1914 20.8975 48.1815 21.3117 48.4308 21.5734C48.5594 21.7084 48.7318 21.7764 48.9047 21.7764C49.0669 21.7764 49.2294 21.7165 49.356 21.5958L52.1445 18.9389H56.1916ZM15.8083 42.2213V18.9389H41.3131L16.8774 42.2213H15.8083Z" fill="white" fill-opacity="0.85"/>
+                                                        </svg>
+                                                            
+
+                                                    </section>
+
+                                                    <section class = "ao-add-asset-screen-details-added-item-info">
+
+                                                        <h4>Screen 1 . 3 Slots</h4>
+
+                                                        <a href="#" class="ao-add-asset-screen-details-added-item-edit">
+                                                            
+                                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M12.4974 3.33774L16.5858 7.42608L6.23697 17.7749L2.15091 13.6866L12.4974 3.33774ZM19.6881 2.35173L17.8648 0.52847C17.1602 -0.176157 16.016 -0.176157 15.309 0.52847L13.5625 2.27497L17.6509 6.36335L19.6881 4.32615C20.2346 3.7796 20.2346 2.89824 19.6881 2.35173ZM0.011377 19.433C-0.0630262 19.7679 0.239299 20.0679 0.574189 19.9865L5.13 18.8819L1.04394 14.7936L0.011377 19.433Z" fill="#197BBD"/>
+                                                                </svg>
+                                                                             
+                                                        </a>
+
+                                                        <p>242" by 142" screen size, Landscape orientation</p>
+
+                                                        <p>Formats: MP4, MPEG, AVI</p>
+                                                    </section>
+
+                                                </section>
+
+                                                <section class = "ao-add-asset-screen-details-added-item">
+
+                                                        <section class="ao-add-asset-screen-details-added-item-img">
+    
+                                                            <!-- <img  src="svg/icon-big-screen.png" alt="screen" /> -->
+                                                            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <rect width="72" height="72" fill="black" fill-opacity="0"/>
+                                                                <rect width="72" height="72" rx="2" fill="#DADADA"/>
+                                                                <rect width="48" height="41.6217" fill="black" fill-opacity="0" transform="translate(12 15)"/>
+                                                                <path d="M59.3456 15H12.6544C12.293 15 12 15.293 12 15.6544V45.5059C12 45.8673 12.293 46.1603 12.6544 46.1603H13.9759V55.9671C13.9759 56.3286 14.2689 56.6216 14.6303 56.6216H16.5721C16.9336 56.6216 17.2266 56.3286 17.2266 55.9671V53.8576L20.1047 56.0162C20.1298 56.3547 20.4118 56.6216 20.7567 56.6216H22.6986C23.06 56.6216 23.353 56.3286 23.353 55.9671V46.1603H48.4981V55.9671C48.4981 56.3286 48.7911 56.6216 49.1525 56.6216H51.0943C51.4557 56.6216 51.7487 56.3286 51.7487 55.9671V53.8576L54.6268 56.0163C54.6521 56.3547 54.9339 56.6217 55.2788 56.6217H57.2207C57.5821 56.6217 57.8751 56.3287 57.8751 55.9672V46.1603H59.3456C59.707 46.1603 60 45.8673 60 45.5059V15.6544C60 15.2929 59.707 15 59.3456 15ZM57.2206 44.8515H55.2787H51.0943H49.1525H22.6986H20.7567H16.5721H14.6303H13.3088V16.3088H58.6912V44.8515H57.2206ZM49.8069 46.1603H50.4399V55.3127H49.8069V46.1603ZM52.036 46.1603H54.6244V48.1016L52.036 46.1603ZM51.7487 47.5809L54.1881 49.4104L51.7487 51.2399V47.5809ZM54.6244 50.7192V54.3783L52.185 52.5488L54.6244 50.7192ZM56.5662 55.3127H55.9332V46.1603H56.5662V55.3127ZM15.2848 46.1603H15.9177V55.3127H15.2848V46.1603ZM17.5139 46.1603H20.1023V48.1016L17.5139 46.1603ZM17.2266 47.5809L19.666 49.4104L17.2266 51.24V47.5809ZM20.1023 50.7192V54.3782L17.6629 52.5488L20.1023 50.7192ZM22.0442 55.3127H21.4111V46.1603H22.0442V55.3127ZM56.846 17.6301H15.1539C14.7925 17.6301 14.4995 17.9231 14.4995 18.2845V42.8757C14.4995 43.2372 14.7925 43.5302 15.1539 43.5302H56.846C57.2075 43.5302 57.5005 43.2372 57.5005 42.8757V18.2845C57.5005 17.9231 57.2075 17.6301 56.846 17.6301ZM56.1916 18.9389V42.2213H27.7088L45.3855 25.379C45.6472 25.1297 45.6572 24.7155 45.4079 24.4538C45.1586 24.192 44.7443 24.1821 44.4826 24.4314L25.8114 42.2213H18.7747L43.2105 18.9389H50.2471L48.4531 20.6482C48.1914 20.8975 48.1815 21.3117 48.4308 21.5734C48.5594 21.7084 48.7318 21.7764 48.9047 21.7764C49.0669 21.7764 49.2294 21.7165 49.356 21.5958L52.1445 18.9389H56.1916ZM15.8083 42.2213V18.9389H41.3131L16.8774 42.2213H15.8083Z" fill="white" fill-opacity="0.85"/>
+                                                            </svg>
+                                                                
+    
+                                                        </section>
+    
+                                                        <section class = "ao-add-asset-screen-details-added-item-info">
+    
+                                                            <h4>Screen 1 . 3 Slots</h4>
+    
+                                                            <a href="#" class="ao-add-asset-screen-details-added-item-edit">
+                                                                
+                                                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M12.4974 3.33774L16.5858 7.42608L6.23697 17.7749L2.15091 13.6866L12.4974 3.33774ZM19.6881 2.35173L17.8648 0.52847C17.1602 -0.176157 16.016 -0.176157 15.309 0.52847L13.5625 2.27497L17.6509 6.36335L19.6881 4.32615C20.2346 3.7796 20.2346 2.89824 19.6881 2.35173ZM0.011377 19.433C-0.0630262 19.7679 0.239299 20.0679 0.574189 19.9865L5.13 18.8819L1.04394 14.7936L0.011377 19.433Z" fill="#197BBD"/>
+                                                                    </svg>
+                                                                                 
+                                                            </a>
+    
+                                                            <p>242" by 142" screen size, Landscape orientation</p>
+    
+                                                            <p>Formats: MP4, MPEG, AVI</p>
+                                                        </section>
+    
+                                                </section>
+
+                                            </section>
+
+                                        </section>
+
+                                    </section>
+                                </div>
+                            
+                                <div class="tab-pane fade" id="annualrates" role="tabpanel" aria-labelledby="annualrates-tab">
+                                
+                                        <section class="ao-add-asset-body-info">
+
+                                                <h2>Annual Rates</h2>
+
+                                                <p>
+                                                    Tell us the amount of money you will like to make from your screens per annum. This will help us determine how much we should charge ad buyers per slot.
+                                                </p>
+                
+                                         </section>
+                
+                                        <section class="ao-add-asset-body-form">
+                
+                                                <form>
+                                                    
+                                                    <section class="ao-add-asset-body-form-item">
+                                                    
+                                                        <section class="ao-add-asset-body-form-item-type">
+                
+                                                            <label for="type">Billboard Type</label>
+                                                            
+                                                            <select class="ao-add-asset-body-form-input">
+                                                            
+                                                                <option>Indoor Shopping Mall</option>
+                                                            
+                                                            </select>
+                
+                                                        </section>
+                
+                                                        <section class="ao-add-asset-body-form-item-screen">
+                                                        
+                                                            <label>Screens</label>
+                
+                                                            <input type="number" class="ao-add-asset-body-form-input" />
+                
+                                                        </section>
+                
+                                                    </section>
+                
+                                                    <label>Billboard Address</label>
+                
+                                                    <input type="text" class="ao-add-asset-body-form-input"  placeholder="Street Name"/>
+                                                    
+                                                    <section class="ao-add-asset-body-form-item">
+                                                    
+                                                            <section class="ao-add-asset-body-form-item-state">
+                    
+                                                                <label for="state">State</label>
+                                                                
+                                                                <select class="ao-add-asset-body-form-input">
+                                                                
+                                                                    <option>Lagos</option>
+                                                                
+                                                                </select>
+                    
+                                                            </section>
+                    
+                                                            <section class="ao-add-asset-body-form-item-city">
+                                                            
+                                                                <label>City</label>
+                    
+                                                                <input type="text" class="ao-add-asset-body-form-input" />
+                    
+                                                            </section>
+                    
+                                                    </section>
+                
+                                                    <label>Notable Heritage</label>
+                
+                                                    <input type="text" class="ao-add-asset-body-form-input"  placeholder="A popular building bridge or location"/>
+                                                    
+                                                    <input type="submit" class="ao-add-asset-body-form-save-btn" value="SAVE BILLBOARD DETAILS"/>
+                
+                                                </form>
+                                                
+                                        </section>
+
+                                </div>
+                        
+                                <div class="tab-pane fade" id="geotagging" role="tabpanel" aria-labelledby="geotagging-tab">..2.</div>
+                                
+                        </div>
+
+                        <!-- <section class="ao-add-asset-body">
+
+                            <section class="ao-add-asset-body-info">
+
+                                <h2>Billboard Details</h2>
+                                <p>
+                                        This section allows us understand the type of digital billboard you have and where it is located.
+                                </p>
+
+                            </section>
+
+                            <section class="ao-add-asset-body-form">
+
+                                <form>
+                                    
+                                    <section class="ao-add-asset-body-form-item">
+                                    
+                                        <section class="ao-add-asset-body-form-item-type">
+
+                                            <label for="type">Billboard Type</label>
+                                            
+                                            <select class="ao-add-asset-body-form-input">
+                                            
+                                                <option>Indoor Shopping Mall</option>
+                                            
+                                            </select>
+
+                                        </section>
+
+                                        <section class="ao-add-asset-body-form-item-screen">
+                                        
+                                            <label>Screens</label>
+
+                                            <input type="number" class="ao-add-asset-body-form-input" />
+
+                                        </section>
+
+                                    </section>
+
+                                    <label>Billboard Address</label>
+
+                                    <input type="text" class="ao-add-asset-body-form-input"  placeholder="Street Name"/>
+                                    
+                                    <section class="ao-add-asset-body-form-item">
+                                    
+                                            <section class="ao-add-asset-body-form-item-state">
+    
+                                                <label for="state">State</label>
+                                                
+                                                <select class="ao-add-asset-body-form-input">
+                                                
+                                                    <option>Lagos</option>
+                                                
+                                                </select>
+    
+                                            </section>
+    
+                                            <section class="ao-add-asset-body-form-item-city">
+                                            
+                                                <label>City</label>
+    
+                                                <input type="text" class="ao-add-asset-body-form-input" />
+    
+                                            </section>
+    
+                                    </section>
+
+                                    <label>Notable Heritage</label>
+
+                                    <input type="text" class="ao-add-asset-body-form-input"  placeholder="A popular building bridge or location"/>
+                                    
+                                    <input type="submit" class="ao-add-asset-body-form-save-btn" value="SAVE BILLBOARD DETAILS"/>
+
+                                </form>
+                                
+                            </section>
+
+                        </section> -->
+
+                    </section>
+
+                </div>
+
+            </div>  
+        
+        </div>
+
+ 
+    <script src="js/load-svg.js"></script>
+    <script src="js/csi.min.js"></script>
+
+</body>
+
+</html>
