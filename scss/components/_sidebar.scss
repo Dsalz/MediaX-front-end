@@ -1,0 +1,65 @@
+.sidebar {
+    background: #FFFFFF;
+    box-shadow: 4px 0px 15px rgba(50, 50, 50, 0.05), 2px 0px 8px rgba(50, 50, 50, 0.15);
+    left: 228px;
+    height: 100%;
+    margin-left: -228px;
+    overflow-y: auto;
+    position: absolute;
+    width: 228px;
+    z-index: 1000;
+    margin-top: 68px;
+    position: fixed;
+    &__primary {
+        margin-top: 3.6rem;
+    }
+    &__link {
+        color: $alt-text-color;
+        cursor: pointer;
+        display: block;
+        font-size: 1.6rem;
+        font-weight: 500;
+        height: 5.6rem;
+        line-height: 5.6rem;
+        padding-left: 3.2rem;
+        padding-right: 3.2rem;
+        width: 100%;
+        &:hover {
+            color: $blue;
+            svg {
+                fill: $blue;
+            }
+        }
+        &--secondary {
+            height: 4rem;
+            line-height: 4rem;
+        }
+    }
+    &__link-active {
+        background: $light-blue;
+        border-left: 4px solid $blue;
+        color: $blue;
+        fill: $blue;
+        svg {
+            fill: $blue;
+        }
+        &--secondary {
+            background: #FFFFFF;
+            border-left: none;
+        }
+    }
+    &__divider {
+        border: 1px solid #C4C4C4;
+        margin: 4rem auto;
+        width: 164px;
+    }
+}
+
+@include screen(med) {
+    .sidebar {
+        display: none;
+    }
+    .work__body {
+        margin-left: 0 !important;
+    }
+}

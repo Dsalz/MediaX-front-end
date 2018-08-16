@@ -1,0 +1,38 @@
+.svg-div {
+    display: none;
+}
+
+svg,
+.icon {
+    display: inline-block;
+    fill: $body-text-color;
+    height: 2rem;
+    vertical-align: middle;
+    width: 2rem;
+    &--button {
+        fill: #FFFFFF;
+        height: 1.6rem;
+        margin-right: 0.4rem;
+        vertical-align: middle;
+        width: 1.6rem;
+    }
+    &--button-alt {
+        fill: $blue;
+        height: 1.6rem;
+        margin-right: 0.4rem;
+        vertical-align: middle;
+        width: 1.6rem;
+    }
+    &--logo {
+        height: 2.8rem;
+        margin-right: 1.2rem;
+        vertical-align: middle;
+        width: 2.8rem;
+    }
+    &--dashboard {
+        fill: $alt-text-color;
+        margin-right: 2rem;
+        width: 2rem;
+        vertical-align: middle;
+    }
+}

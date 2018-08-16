@@ -1,0 +1,73 @@
+.ao-navbar {
+    height: 68px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(50, 50, 50, 0.05), 0px 2px 8px rgba(50, 50, 50, 0.15);
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    padding: 0 !important;
+    &__logo-container {
+        background: $blue;
+        color: #FFFFFF;
+        font-size: 1.6rem;
+        font-weight: 700;
+        height: 6.8rem;
+        padding: 2rem 3.2rem;
+        text-align: center;
+    }
+    &__search {
+        border: none;
+        margin-left: 36px;
+        text-indent: 35px;
+        font-size: 16px;
+        padding: 10px 0;
+        &:active,
+        &:focus {
+            outline: none;
+        }
+        &::placeholder {
+            color: #C4C4C4;
+        }
+        &-section {
+            margin-right: 40%;
+        }
+    }
+    &__icon {
+        &-search {
+            margin-left: 36px;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 25px;
+            fill: #C4C4C4;
+        }
+        &-notification {
+            fill: #1a1a1a;
+        }
+    }
+    &__username {
+        color: #1a1a1a;
+        font-weight: 500;
+        margin: 6px 0 0 0;
+    }
+    &__user {
+        &-imagewrapper {
+            width: 32px;
+            height: 32px;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        &-image {
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+        }
+    }
+    &__profile-wrapper {
+        display: inline-flex;
+        &::after {
+            margin-top: 13px;
+            margin-left: 1.255em;
+        }
+    }
+}

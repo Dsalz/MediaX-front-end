@@ -1,0 +1,34 @@
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  @include screen(small) {
+    font-size: 58%;
+  }
+}
+
+body {
+  color: $body-text-color;
+  font-family: $body-font;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.global-u-text-left {
+  text-align: left;
+}
+
+.global-u-text-right {
+  text-align: right;
+}
+
+.global-u-text-center {
+  text-align: center;
+}

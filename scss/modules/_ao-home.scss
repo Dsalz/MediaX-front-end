@@ -1,0 +1,79 @@
+.work {
+    &__body {
+        background: #F5F5FA;
+        margin-left: 228px;
+        padding: 104px 36px 36px 36px;
+        &-container {
+            background-color: #ffffff;
+        }
+        &-header {
+            font-weight: 600;
+            padding: 21px 42px;
+            font-size: 24px;
+            color: #1a1a1a;
+            &-container {
+                border-radius: 2px 2px 0px 0px;
+                background-color: #ffffff;
+            }
+        }
+        &-line {
+            background-color: #C4C4C4;
+            margin: 0;
+        }
+    }
+}
+
+.dashboard {
+    &__card {
+        background-color: #ffffff;
+        border-radius: 2px;
+        border: none;
+        display: flex;
+        height: 160px;
+        &-container {
+            background-color: #e9e9e9;
+            width: 100%;
+            padding: 42px;
+            margin-bottom: 42px;
+        }
+        &-icon {
+            fill: #3BB75E;
+            width: 44px;
+            height: 36.67px;
+        }
+        &-name {
+            color: #808086;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+        &-fig {
+            font-size: 24px;
+            color: #1a1a1a;
+        }
+    }
+    &__calendar {
+        &-header {
+            color: #ffffff;
+            padding: 14px 0;
+            font-weight: 500;
+            &-wrapper {
+                background-color: #197BBD;
+                border-radius: 2px 2px 0px 0px;
+            }
+        }
+    }
+}
+
+.fc-toolbar h2 {
+    color: #6B7897;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 16px;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
